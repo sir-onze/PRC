@@ -1,0 +1,34 @@
+Resposta às queries:
+
+
+1 - Nomes dos compositores por ordem alfabética
+
+	select ?compositor  where {
+    ?id a :Obra .
+    ?id :compositor ?compositor.
+	}  ORDER BY ?compositor
+
+
+2 - Títulos das obras do tipo "Marcha de Desfile"
+	
+	select ?titulo ?tipo where {
+		?id:tipo "Marcha de Desfile".
+	    ?id :compositor ?compositor.
+	    ?id :titulo ?titulo
+	}
+
+3 - Para cada obra quantas partituras estão catalogadas
+
+select ?nome (COUNT(?Partitura) AS ?partituras )where {
+       ?id a :Obra .
+       ?id :titulo ?nome .
+       ?id :temAssociado ?Partitura .
+    } GROUP BY ?nome ORDER BY ?partituras
+
+4 - Quais os títulos das obras com partitura para bombo
+
+select ?nome where {
+       ?id a :Obra .
+       ?id :titulo ?nome .
+       ?id :instrumento "Bombo" .
+    }
