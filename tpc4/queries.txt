@@ -1,0 +1,44 @@
+//1
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX : <http://prc.di.uminho.pt/2020/amd#>
+select ?nome where {
+    ?s rdf:type :Compositor .
+    ?s :nome ?nome .
+} 
+order by ?nome
+
+//2
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX : <http://prc.di.uminho.pt/2020/amd#>
+select ?tit where {
+    ?s rdf:type :Obra .
+    ?s :tipo "Marcha de Desfile" .
+    ?s :título ?tit
+} 
+order by ?tit
+
+//3
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX : <http://prc.di.uminho.pt/2020/amd#>
+select ?tit (count(?part) as ?numPartituras) where {
+    ?s rdf:type :Obra .
+    ?s :temPartitura ?part .
+    ?s :título ?tit 
+} 
+
+group by ?tit
+order by desc(?numPartituras)
+
+
+//4 Quantas partituras por Instrumento
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX : <http://prc.di.uminho.pt/2020/amd#>
+select ?des (count(?part) as ?numPartituras) where {
+    ?s rdf:type :Instrumento .
+    ?s :toca ?part .
+    ?s :designação ?des
+} 
+
+group by ?des
+order by desc(?numPartituras)
+limit 10
