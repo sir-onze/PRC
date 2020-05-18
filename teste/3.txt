@@ -1,0 +1,94 @@
+PREFIX : <http://www.tartesdajulia.com/ontologies/2020/prc-genoa#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+(4)
+Construct{
+	?a :temIrmao ?b.
+}
+Where {
+    ?a a :Pessoa.
+    ?b a :Pessoa.
+	?a :temPai ?x. 
+    ?a :temMae ?y. 
+    ?b :temPai ?x. 
+    ?b :temMae ?y.
+    filter(?b != ?a).
+}
+
+-------------------------------
+(1)
+Construct{
+	?b :temTio ?a
+}
+Where {
+	?a a :Pessoa. 
+	{
+		{ ?b :temPai ?x . } union { ?b :temMae ?x . }
+	}
+	?x :temIrmao ?a .
+ 	filter(?b != ?a)
+}
+
+-------------------------------
+
+(2)
+Construct{
+	?b :ePrimo ?a.
+    ?a :ePrimo ?b.
+}
+Where {
+	?a a :Pessoa. 
+	{
+		{ ?b :temPai ?x . } union { ?b :temMae ?x . }
+	}
+	?x :temTio ?a .
+ 	filter(?b != ?a)
+}
+
+-------------------------------
+
+(3)
+Construct{
+	?b :eAvo ?a.
+    ?a :eNeto ?b.
+}
+Where {
+	?b a :Pessoa. 
+	{
+		{ ?a :temPai ?x . } union { ?a :temMae ?x . }
+	}
+    {
+		{ ?x :temPai ?b . } union { ?x :temMae ?b . }
+	}
+ 	filter(?b != ?a)
+}
+
+-------------------------------
+
+(5)
+Construct{
+        ?i1 :temMeioIrmao ?i2.
+    }
+    Where {
+        ?i1 a :Pessoa.
+        ?i2 a :Pessoa.
+        filter(?i1 != ?i2).
+     	?i1 :temPai ?p1 .
+    	?i1 :temMae ?m1 .
+        ?i2 :temPai ?p2 .
+    	?i2 :temMae ?m2 .
+        {
+            {
+            	filter(?p1 = ?p2) .
+                filter(?m1 != ?m2) .
+        	}
+                union
+            {
+                filter(?m1 = ?m2) .
+             	filter(?p1 != ?p2) .
+        	}  
+        }
+    	
+    }
+

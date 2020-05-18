@@ -1,0 +1,79 @@
+@prefix : <http://www.tartesdajulia.com/ontologies/2020/prc-genoa#> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:Ana_Margarida_Ribeiro_Leite_1980 :ePrimo :Albina_Esteves_Araujo_1910, :Emilia_Esteves_Araujo_1908,
+    :Filomena_Esteves_Araujo_1927, :Henrique_Luis_Esteves_Araujo_1924, :Jose_Emilio_Esteves_Araujo_1916,
+    :Luis_Esteves_Araujo_1918, :Sara_Esteves_Araujo_1914, :Virginia_Esteves_Araujo_1921 .
+
+:Albina_Esteves_Araujo_1910 :ePrimo :Ana_Margarida_Ribeiro_Leite_1980, :Henrique_Miguel_Cabrita_Araujo_Leite_1971,
+    :Isabel_Maria_Cabrita_Araujo_Leite_1971, :Jose_Carlos_Leite_Ramalho_1967, :Maria_Helena_Leite_Ramalho_1968,
+    :Teresa_Maria_Ribeiro_Leite_1985 .
+
+:Emilia_Esteves_Araujo_1908 :ePrimo :Ana_Margarida_Ribeiro_Leite_1980, :Henrique_Miguel_Cabrita_Araujo_Leite_1971,
+    :Isabel_Maria_Cabrita_Araujo_Leite_1971, :Jose_Carlos_Leite_Ramalho_1967, :Maria_Helena_Leite_Ramalho_1968,
+    :Teresa_Maria_Ribeiro_Leite_1985 .
+
+:Filomena_Esteves_Araujo_1927 :ePrimo :Ana_Margarida_Ribeiro_Leite_1980, :Henrique_Miguel_Cabrita_Araujo_Leite_1971,
+    :Isabel_Maria_Cabrita_Araujo_Leite_1971, :Jose_Carlos_Leite_Ramalho_1967, :Maria_Helena_Leite_Ramalho_1968,
+    :Teresa_Maria_Ribeiro_Leite_1985 .
+
+:Henrique_Luis_Esteves_Araujo_1924 :ePrimo :Ana_Margarida_Ribeiro_Leite_1980, :Henrique_Miguel_Cabrita_Araujo_Leite_1971,
+    :Isabel_Maria_Cabrita_Araujo_Leite_1971, :Jose_Carlos_Leite_Ramalho_1967, :Maria_Helena_Leite_Ramalho_1968,
+    :Teresa_Maria_Ribeiro_Leite_1985 .
+
+:Jose_Emilio_Esteves_Araujo_1916 :ePrimo :Ana_Margarida_Ribeiro_Leite_1980, :Henrique_Miguel_Cabrita_Araujo_Leite_1971,
+    :Isabel_Maria_Cabrita_Araujo_Leite_1971, :Jose_Carlos_Leite_Ramalho_1967, :Maria_Helena_Leite_Ramalho_1968,
+    :Teresa_Maria_Ribeiro_Leite_1985 .
+
+:Luis_Esteves_Araujo_1918 :ePrimo :Ana_Margarida_Ribeiro_Leite_1980, :Henrique_Miguel_Cabrita_Araujo_Leite_1971,
+    :Isabel_Maria_Cabrita_Araujo_Leite_1971, :Jose_Carlos_Leite_Ramalho_1967, :Maria_Helena_Leite_Ramalho_1968,
+    :Teresa_Maria_Ribeiro_Leite_1985 .
+
+:Sara_Esteves_Araujo_1914 :ePrimo :Ana_Margarida_Ribeiro_Leite_1980, :Henrique_Miguel_Cabrita_Araujo_Leite_1971,
+    :Isabel_Maria_Cabrita_Araujo_Leite_1971, :Jose_Carlos_Leite_Ramalho_1967, :Maria_Helena_Leite_Ramalho_1968,
+    :Teresa_Maria_Ribeiro_Leite_1985 .
+
+:Virginia_Esteves_Araujo_1921 :ePrimo :Ana_Margarida_Ribeiro_Leite_1980, :Henrique_Miguel_Cabrita_Araujo_Leite_1971,
+    :Isabel_Maria_Cabrita_Araujo_Leite_1971, :Jose_Carlos_Leite_Ramalho_1967, :Maria_Helena_Leite_Ramalho_1968,
+    :Teresa_Maria_Ribeiro_Leite_1985 .
+
+:Henrique_Miguel_Cabrita_Araujo_Leite_1971 :ePrimo :Albina_Esteves_Araujo_1910, :Emilia_Esteves_Araujo_1908,
+    :Filomena_Esteves_Araujo_1927, :Henrique_Luis_Esteves_Araujo_1924, :Jose_Emilio_Esteves_Araujo_1916,
+    :Luis_Esteves_Araujo_1918, :Sara_Esteves_Araujo_1914, :Virginia_Esteves_Araujo_1921 .
+
+:Isabel_Maria_Cabrita_Araujo_Leite_1971 :ePrimo :Albina_Esteves_Araujo_1910, :Emilia_Esteves_Araujo_1908,
+    :Filomena_Esteves_Araujo_1927, :Henrique_Luis_Esteves_Araujo_1924, :Jose_Emilio_Esteves_Araujo_1916,
+    :Luis_Esteves_Araujo_1918, :Sara_Esteves_Araujo_1914, :Virginia_Esteves_Araujo_1921 .
+
+:Jose_Carlos_Leite_Ramalho_1967 :ePrimo :Abilio_Silva_Ramalho, :Albina_Esteves_Araujo_1910,
+    :Ana_Silva_Ramalho, :Arminda_Silva_Ramalho, :Emilia_Esteves_Araujo_1908, :Ezequiel_Silva_Ramalho,
+    :Filomena_Esteves_Araujo_1927, :Florinda_Alves_Santos, :Generosa_Silva_Ramalho, :Henrique_Luis_Esteves_Araujo_1924,
+    :Jose_Emilio_Esteves_Araujo_1916, :Luis_Esteves_Araujo_1918, :Sara_Esteves_Araujo_1914,
+    :Virginia_Esteves_Araujo_1921 .
+
+:Abilio_Silva_Ramalho :ePrimo :Jose_Carlos_Leite_Ramalho_1967, :Maria_Helena_Leite_Ramalho_1968 .
+
+:Ana_Silva_Ramalho :ePrimo :Jose_Carlos_Leite_Ramalho_1967, :Maria_Helena_Leite_Ramalho_1968 .
+
+:Arminda_Silva_Ramalho :ePrimo :Jose_Carlos_Leite_Ramalho_1967, :Maria_Helena_Leite_Ramalho_1968 .
+
+:Ezequiel_Silva_Ramalho :ePrimo :Jose_Carlos_Leite_Ramalho_1967, :Maria_Helena_Leite_Ramalho_1968 .
+
+:Florinda_Alves_Santos :ePrimo :Jose_Carlos_Leite_Ramalho_1967, :Maria_Helena_Leite_Ramalho_1968 .
+
+:Generosa_Silva_Ramalho :ePrimo :Jose_Carlos_Leite_Ramalho_1967, :Maria_Helena_Leite_Ramalho_1968 .
+
+:Maria_Helena_Leite_Ramalho_1968 :ePrimo :Abilio_Silva_Ramalho, :Albina_Esteves_Araujo_1910,
+    :Ana_Silva_Ramalho, :Arminda_Silva_Ramalho, :Emilia_Esteves_Araujo_1908, :Ezequiel_Silva_Ramalho,
+    :Filomena_Esteves_Araujo_1927, :Florinda_Alves_Santos, :Generosa_Silva_Ramalho, :Henrique_Luis_Esteves_Araujo_1924,
+    :Jose_Emilio_Esteves_Araujo_1916, :Luis_Esteves_Araujo_1918, :Sara_Esteves_Araujo_1914,
+    :Virginia_Esteves_Araujo_1921 .
+
+:Teresa_Maria_Ribeiro_Leite_1985 :ePrimo :Albina_Esteves_Araujo_1910, :Emilia_Esteves_Araujo_1908,
+    :Filomena_Esteves_Araujo_1927, :Henrique_Luis_Esteves_Araujo_1924, :Jose_Emilio_Esteves_Araujo_1916,
+    :Luis_Esteves_Araujo_1918, :Sara_Esteves_Araujo_1914, :Virginia_Esteves_Araujo_1921 .

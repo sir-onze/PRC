@@ -1,0 +1,17 @@
+(2)
+
+PREFIX : <http://www.semanticweb.org/macz/ontologies/2020/4/con#>
+select ?fracao ?mes where { 
+	?fracao a :Fração.
+    ?fracao :pagou ?mes.
+    FILTER NOT EXISTS {
+        ?mes :nome 'Abril2020'
+    }
+}
+
+(1)
+
+select ?despesa ?receita where { 
+	?despesa a :Despesa.
+    ?receita a :Receita.
+}

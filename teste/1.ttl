@@ -1,0 +1,318 @@
+@prefix : <http://www.semanticweb.org/macz/ontologies/2020/4/bbc#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/macz/ontologies/2020/4/bbc> .
+
+<http://www.semanticweb.org/macz/ontologies/2020/4/bbc> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/macz/ontologies/2020/4/bb#temColeção
+<http://www.semanticweb.org/macz/ontologies/2020/4/bb#temColeção> rdf:type owl:ObjectProperty ;
+                                                                  owl:inverseOf <http://www.semanticweb.org/macz/ontologies/2020/4/bb#éColeçãoDe> .
+
+
+###  http://www.semanticweb.org/macz/ontologies/2020/4/bb#temIngrediente
+<http://www.semanticweb.org/macz/ontologies/2020/4/bb#temIngrediente> rdf:type owl:ObjectProperty ;
+                                                                      owl:inverseOf <http://www.semanticweb.org/macz/ontologies/2020/4/bb#éIngredienteDe> .
+
+
+###  http://www.semanticweb.org/macz/ontologies/2020/4/bb#temPrato
+<http://www.semanticweb.org/macz/ontologies/2020/4/bb#temPrato> rdf:type owl:ObjectProperty ;
+                                                                owl:inverseOf <http://www.semanticweb.org/macz/ontologies/2020/4/bb#éPratoDe> .
+
+
+###  http://www.semanticweb.org/macz/ontologies/2020/4/bb#temSecção
+<http://www.semanticweb.org/macz/ontologies/2020/4/bb#temSecção> rdf:type owl:ObjectProperty ;
+                                                                 owl:equivalentProperty :temSecção ;
+                                                                 owl:inverseOf <http://www.semanticweb.org/macz/ontologies/2020/4/bb#éSecçãoDe> .
+
+
+###  http://www.semanticweb.org/macz/ontologies/2020/4/bb#éColeçãoDe
+<http://www.semanticweb.org/macz/ontologies/2020/4/bb#éColeçãoDe> rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/macz/ontologies/2020/4/bb#éIngredienteDe
+<http://www.semanticweb.org/macz/ontologies/2020/4/bb#éIngredienteDe> rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/macz/ontologies/2020/4/bb#éPratoDe
+<http://www.semanticweb.org/macz/ontologies/2020/4/bb#éPratoDe> rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/macz/ontologies/2020/4/bb#éSecçãoDe
+<http://www.semanticweb.org/macz/ontologies/2020/4/bb#éSecçãoDe> rdf:type owl:ObjectProperty ;
+                                                                 owl:equivalentProperty [ owl:inverseOf <http://www.semanticweb.org/macz/ontologies/2020/4/bb#temSecção> ;
+                                                                                          owl:equivalentProperty [ owl:inverseOf :temSecção
+                                                                                                                 ]
+                                                                                        ] ;
+                                                                 owl:inverseOf :temSecção .
+
+
+###  http://www.semanticweb.org/macz/ontologies/2020/4/bbc#temColeção
+:temColeção rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/macz/ontologies/2020/4/bbc#temPrato
+:temPrato rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/macz/ontologies/2020/4/bbc#temSecção
+:temSecção rdf:type owl:ObjectProperty ;
+           owl:equivalentProperty [ owl:inverseOf <http://www.semanticweb.org/macz/ontologies/2020/4/bb#éSecçãoDe>
+                                  ] .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/macz/ontologies/2020/4/bb#nome
+<http://www.semanticweb.org/macz/ontologies/2020/4/bb#nome> rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/macz/ontologies/2020/4/bb#Coleção
+<http://www.semanticweb.org/macz/ontologies/2020/4/bb#Coleção> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/macz/ontologies/2020/4/bb#Ingrediente
+<http://www.semanticweb.org/macz/ontologies/2020/4/bb#Ingrediente> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/macz/ontologies/2020/4/bb#Menu
+<http://www.semanticweb.org/macz/ontologies/2020/4/bb#Menu> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/macz/ontologies/2020/4/bb#Prato
+<http://www.semanticweb.org/macz/ontologies/2020/4/bb#Prato> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/macz/ontologies/2020/4/bb#Secção
+<http://www.semanticweb.org/macz/ontologies/2020/4/bb#Secção> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/macz/ontologies/2020/4/bb#Banana
+<http://www.semanticweb.org/macz/ontologies/2020/4/bb#Banana> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Ingrediente> ;
+                                                              <http://www.semanticweb.org/macz/ontologies/2020/4/bb#éIngredienteDe> <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Sago> ;
+                                                              <http://www.semanticweb.org/macz/ontologies/2020/4/bb#nome> "Banana" .
+
+
+###  http://www.semanticweb.org/macz/ontologies/2020/4/bb#Bebida
+<http://www.semanticweb.org/macz/ontologies/2020/4/bb#Bebida> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Coleção> .
+
+
+###  http://www.semanticweb.org/macz/ontologies/2020/4/bb#Cafe
+<http://www.semanticweb.org/macz/ontologies/2020/4/bb#Cafe> rdf:type owl:NamedIndividual ,
+                                                                     <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Coleção> .
+
+
+###  http://www.semanticweb.org/macz/ontologies/2020/4/bb#Camarão
+<http://www.semanticweb.org/macz/ontologies/2020/4/bb#Camarão> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Ingrediente> ;
+                                                               <http://www.semanticweb.org/macz/ontologies/2020/4/bb#éIngredienteDe> <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Khao_Pad_Sab-Pa-Rod> ,
+                                                                                                                                     <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Por_Pia_Goong> ,
+                                                                                                                                     <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Tom_Yam_Goong> ,
+                                                                                                                                     <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Yum_Goong> ;
+                                                               <http://www.semanticweb.org/macz/ontologies/2020/4/bb#nome> "Camarão" .
+
+
+###  http://www.semanticweb.org/macz/ontologies/2020/4/bb#Durian
+<http://www.semanticweb.org/macz/ontologies/2020/4/bb#Durian> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Prato> ;
+                                                              <http://www.semanticweb.org/macz/ontologies/2020/4/bb#temIngrediente> <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Fruta_da_Tailandia> ;
+                                                              <http://www.semanticweb.org/macz/ontologies/2020/4/bb#éPratoDe> <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Sobremesa1> .
+
+
+###  http://www.semanticweb.org/macz/ontologies/2020/4/bb#Entrada
+<http://www.semanticweb.org/macz/ontologies/2020/4/bb#Entrada> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Coleção> ;
+                                                               <http://www.semanticweb.org/macz/ontologies/2020/4/bb#éColeçãoDe> <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Entrada1> .
+
+
+###  http://www.semanticweb.org/macz/ontologies/2020/4/bb#Entrada1
+<http://www.semanticweb.org/macz/ontologies/2020/4/bb#Entrada1> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Secção> ;
+                                                                <http://www.semanticweb.org/macz/ontologies/2020/4/bb#temColeção> <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Entrada> ;
+                                                                <http://www.semanticweb.org/macz/ontologies/2020/4/bb#temPrato> <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Entrada_Mista> ,
+                                                                                                                                <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Por_Pia_Goong> ,
+                                                                                                                                <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Satay_Gai> ;
+                                                                <http://www.semanticweb.org/macz/ontologies/2020/4/bb#éSecçãoDe> <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Menu1> ;
+                                                                :temColeção <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Entrada> ;
+                                                                :temPrato <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Entrada_Mista> ,
+                                                                          <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Satay_Gai> .
+
+
+###  http://www.semanticweb.org/macz/ontologies/2020/4/bb#Entrada_Mista
+<http://www.semanticweb.org/macz/ontologies/2020/4/bb#Entrada_Mista> rdf:type owl:NamedIndividual ,
+                                                                              <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Prato> ;
+                                                                     <http://www.semanticweb.org/macz/ontologies/2020/4/bb#éPratoDe> <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Entrada1> .
+
+
+###  http://www.semanticweb.org/macz/ontologies/2020/4/bb#Frango
+<http://www.semanticweb.org/macz/ontologies/2020/4/bb#Frango> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Ingrediente> ;
+                                                              <http://www.semanticweb.org/macz/ontologies/2020/4/bb#éIngredienteDe> <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Gang_Keaw_Waan_Gai> ,
+                                                                                                                                    <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Khao_Pad_Sab-Pa-Rod> ,
+                                                                                                                                    <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Satay_Gai> ,
+                                                                                                                                    <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Tom_Kha_Gai> ;
+                                                              <http://www.semanticweb.org/macz/ontologies/2020/4/bb#nome> "Frango" .
+
+
+###  http://www.semanticweb.org/macz/ontologies/2020/4/bb#Fruta_da_Tailandia
+<http://www.semanticweb.org/macz/ontologies/2020/4/bb#Fruta_da_Tailandia> rdf:type owl:NamedIndividual ,
+                                                                                   <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Ingrediente> ;
+                                                                          <http://www.semanticweb.org/macz/ontologies/2020/4/bb#éIngredienteDe> <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Durian> .
+
+
+###  http://www.semanticweb.org/macz/ontologies/2020/4/bb#Gang_Keaw_Waan_Gai
+<http://www.semanticweb.org/macz/ontologies/2020/4/bb#Gang_Keaw_Waan_Gai> rdf:type owl:NamedIndividual ,
+                                                                                   <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Prato> ;
+                                                                          <http://www.semanticweb.org/macz/ontologies/2020/4/bb#temIngrediente> <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Frango> ;
+                                                                          <http://www.semanticweb.org/macz/ontologies/2020/4/bb#éPratoDe> <http://www.semanticweb.org/macz/ontologies/2020/4/bb#PratoPrincipal1> .
+
+
+###  http://www.semanticweb.org/macz/ontologies/2020/4/bb#Khao_Pad_Sab-Pa-Rod
+<http://www.semanticweb.org/macz/ontologies/2020/4/bb#Khao_Pad_Sab-Pa-Rod> rdf:type owl:NamedIndividual ,
+                                                                                    <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Prato> ;
+                                                                           <http://www.semanticweb.org/macz/ontologies/2020/4/bb#temIngrediente> <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Camarão> ,
+                                                                                                                                                 <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Frango> ;
+                                                                           <http://www.semanticweb.org/macz/ontologies/2020/4/bb#éPratoDe> <http://www.semanticweb.org/macz/ontologies/2020/4/bb#PratoPrincipal1> .
+
+
+###  http://www.semanticweb.org/macz/ontologies/2020/4/bb#Menu1
+<http://www.semanticweb.org/macz/ontologies/2020/4/bb#Menu1> rdf:type owl:NamedIndividual ,
+                                                                      <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Menu> ;
+                                                             <http://www.semanticweb.org/macz/ontologies/2020/4/bb#temSecção> <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Entrada1> ,
+                                                                                                                              <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Salada1> ,
+                                                                                                                              <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Sobremesa1> ,
+                                                                                                                              <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Sopa1> ;
+                                                             :temSecção <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Entrada1> ,
+                                                                        <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Salada1> ,
+                                                                        <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Sobremesa1> ,
+                                                                        <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Sopa1> .
+
+
+###  http://www.semanticweb.org/macz/ontologies/2020/4/bb#Por_Pia_Goong
+<http://www.semanticweb.org/macz/ontologies/2020/4/bb#Por_Pia_Goong> rdf:type owl:NamedIndividual ,
+                                                                              <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Prato> ;
+                                                                     <http://www.semanticweb.org/macz/ontologies/2020/4/bb#temIngrediente> <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Camarão> ;
+                                                                     <http://www.semanticweb.org/macz/ontologies/2020/4/bb#éPratoDe> <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Entrada1> .
+
+
+###  http://www.semanticweb.org/macz/ontologies/2020/4/bb#PratoPrincipal
+<http://www.semanticweb.org/macz/ontologies/2020/4/bb#PratoPrincipal> rdf:type owl:NamedIndividual ,
+                                                                               <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Coleção> ;
+                                                                      <http://www.semanticweb.org/macz/ontologies/2020/4/bb#éColeçãoDe> <http://www.semanticweb.org/macz/ontologies/2020/4/bb#PratoPrincipal1> .
+
+
+###  http://www.semanticweb.org/macz/ontologies/2020/4/bb#PratoPrincipal1
+<http://www.semanticweb.org/macz/ontologies/2020/4/bb#PratoPrincipal1> rdf:type owl:NamedIndividual ,
+                                                                                <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Secção> ;
+                                                                       <http://www.semanticweb.org/macz/ontologies/2020/4/bb#temColeção> <http://www.semanticweb.org/macz/ontologies/2020/4/bb#PratoPrincipal> ;
+                                                                       <http://www.semanticweb.org/macz/ontologies/2020/4/bb#temPrato> <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Gang_Keaw_Waan_Gai> ,
+                                                                                                                                       <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Khao_Pad_Sab-Pa-Rod> ;
+                                                                       :temColeção <http://www.semanticweb.org/macz/ontologies/2020/4/bb#PratoPrincipal> .
+
+
+###  http://www.semanticweb.org/macz/ontologies/2020/4/bb#Sago
+<http://www.semanticweb.org/macz/ontologies/2020/4/bb#Sago> rdf:type owl:NamedIndividual ,
+                                                                     <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Prato> ;
+                                                            <http://www.semanticweb.org/macz/ontologies/2020/4/bb#temIngrediente> <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Banana> ;
+                                                            <http://www.semanticweb.org/macz/ontologies/2020/4/bb#éPratoDe> <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Sobremesa1> .
+
+
+###  http://www.semanticweb.org/macz/ontologies/2020/4/bb#Salada
+<http://www.semanticweb.org/macz/ontologies/2020/4/bb#Salada> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Coleção> ,
+                                                                       <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Secção> ;
+                                                              <http://www.semanticweb.org/macz/ontologies/2020/4/bb#temColeção> <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Salada> ;
+                                                              <http://www.semanticweb.org/macz/ontologies/2020/4/bb#éColeçãoDe> <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Salada> .
+
+
+###  http://www.semanticweb.org/macz/ontologies/2020/4/bb#Salada1
+<http://www.semanticweb.org/macz/ontologies/2020/4/bb#Salada1> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Secção> ;
+                                                               <http://www.semanticweb.org/macz/ontologies/2020/4/bb#temPrato> <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Yum_Goong> ;
+                                                               <http://www.semanticweb.org/macz/ontologies/2020/4/bb#éSecçãoDe> <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Menu1> ;
+                                                               :temColeção <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Salada> .
+
+
+###  http://www.semanticweb.org/macz/ontologies/2020/4/bb#Satay_Gai
+<http://www.semanticweb.org/macz/ontologies/2020/4/bb#Satay_Gai> rdf:type owl:NamedIndividual ,
+                                                                          <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Prato> ;
+                                                                 <http://www.semanticweb.org/macz/ontologies/2020/4/bb#temIngrediente> <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Frango> ;
+                                                                 <http://www.semanticweb.org/macz/ontologies/2020/4/bb#éPratoDe> <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Entrada1> .
+
+
+###  http://www.semanticweb.org/macz/ontologies/2020/4/bb#Sobremesa
+<http://www.semanticweb.org/macz/ontologies/2020/4/bb#Sobremesa> rdf:type owl:NamedIndividual ,
+                                                                          <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Coleção> ;
+                                                                 <http://www.semanticweb.org/macz/ontologies/2020/4/bb#éColeçãoDe> <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Sobremesa1> ;
+                                                                 <http://www.semanticweb.org/macz/ontologies/2020/4/bb#nome> "Sobremesa" .
+
+
+###  http://www.semanticweb.org/macz/ontologies/2020/4/bb#Sobremesa1
+<http://www.semanticweb.org/macz/ontologies/2020/4/bb#Sobremesa1> rdf:type owl:NamedIndividual ,
+                                                                           <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Secção> ;
+                                                                  <http://www.semanticweb.org/macz/ontologies/2020/4/bb#temColeção> <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Sobremesa> ;
+                                                                  <http://www.semanticweb.org/macz/ontologies/2020/4/bb#temPrato> <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Durian> ,
+                                                                                                                                  <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Sago> ;
+                                                                  <http://www.semanticweb.org/macz/ontologies/2020/4/bb#éSecçãoDe> <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Menu1> ;
+                                                                  :temColeção <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Sobremesa> .
+
+
+###  http://www.semanticweb.org/macz/ontologies/2020/4/bb#Sopa
+<http://www.semanticweb.org/macz/ontologies/2020/4/bb#Sopa> rdf:type owl:NamedIndividual ,
+                                                                     <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Coleção> ;
+                                                            <http://www.semanticweb.org/macz/ontologies/2020/4/bb#éColeçãoDe> <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Sopa1> .
+
+
+###  http://www.semanticweb.org/macz/ontologies/2020/4/bb#Sopa1
+<http://www.semanticweb.org/macz/ontologies/2020/4/bb#Sopa1> rdf:type owl:NamedIndividual ,
+                                                                      <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Secção> ;
+                                                             <http://www.semanticweb.org/macz/ontologies/2020/4/bb#temColeção> <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Sopa> ;
+                                                             <http://www.semanticweb.org/macz/ontologies/2020/4/bb#temPrato> <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Tom_Kha_Gai> ,
+                                                                                                                             <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Tom_Yam_Goong> ;
+                                                             <http://www.semanticweb.org/macz/ontologies/2020/4/bb#éSecçãoDe> <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Menu1> ;
+                                                             :temColeção <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Sopa> ;
+                                                             :temPrato <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Tom_Kha_Gai> ,
+                                                                       <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Tom_Yam_Goong> .
+
+
+###  http://www.semanticweb.org/macz/ontologies/2020/4/bb#Tom_Kha_Gai
+<http://www.semanticweb.org/macz/ontologies/2020/4/bb#Tom_Kha_Gai> rdf:type owl:NamedIndividual ,
+                                                                            <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Prato> ;
+                                                                   <http://www.semanticweb.org/macz/ontologies/2020/4/bb#temIngrediente> <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Frango> ;
+                                                                   <http://www.semanticweb.org/macz/ontologies/2020/4/bb#éPratoDe> <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Sopa1> .
+
+
+###  http://www.semanticweb.org/macz/ontologies/2020/4/bb#Tom_Yam_Goong
+<http://www.semanticweb.org/macz/ontologies/2020/4/bb#Tom_Yam_Goong> rdf:type owl:NamedIndividual ,
+                                                                              <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Prato> ;
+                                                                     <http://www.semanticweb.org/macz/ontologies/2020/4/bb#temIngrediente> <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Camarão> ;
+                                                                     <http://www.semanticweb.org/macz/ontologies/2020/4/bb#éPratoDe> <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Sopa1> .
+
+
+###  http://www.semanticweb.org/macz/ontologies/2020/4/bb#Yum_Goong
+<http://www.semanticweb.org/macz/ontologies/2020/4/bb#Yum_Goong> rdf:type owl:NamedIndividual ,
+                                                                          <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Prato> ;
+                                                                 <http://www.semanticweb.org/macz/ontologies/2020/4/bb#temIngrediente> <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Camarão> ;
+                                                                 <http://www.semanticweb.org/macz/ontologies/2020/4/bb#éPratoDe> <http://www.semanticweb.org/macz/ontologies/2020/4/bb#Salada1> .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

@@ -1,0 +1,100 @@
+@prefix : <http://www.tartesdajulia.com/ontologies/2020/prc-genoa#> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:Marcal_Aristides_Costa_Leite_1909 :eAvo :Ana_Margarida_Ribeiro_Leite_1980, :Henrique_Miguel_Cabrita_Araujo_Leite_1971,
+    :Isabel_Maria_Cabrita_Araujo_Leite_1971, :Jose_Carlos_Leite_Ramalho_1967, :Maria_Helena_Leite_Ramalho_1968,
+    :Teresa_Maria_Ribeiro_Leite_1985 .
+
+:Ana_Margarida_Ribeiro_Leite_1980 :eNeto :Marcal_Aristides_Costa_Leite_1909, :Maria_Esteves_Araujo_1912 .
+
+:Marcal_Costa_Leite :eAvo :Henrique_Marcal_Araujo_Leite_1943, :Maria_Flora_Araujo_Leite_1941,
+    :Rui_Alberto_Araujo_Leite_1948 .
+
+:Rui_Alberto_Araujo_Leite_1948 :eNeto :Flora_Castilho_Couto_Leite, :Marcal_Costa_Leite,
+    :Maria_Araujo_1884 .
+
+:Henrique_Marcal_Araujo_Leite_1943 :eNeto :Flora_Castilho_Couto_Leite, :Marcal_Costa_Leite,
+    :Maria_Araujo_1884 .
+
+:Henrique_Miguel_Cabrita_Araujo_Leite_1971 :eNeto :Marcal_Aristides_Costa_Leite_1909,
+    :Maria_Esteves_Araujo_1912 .
+
+:Manuel_Silva_Ramalho_1866 :eAvo :Ilda_Santos_Ramalho_1949, :Jose_Santos_Ramalho_1942,
+    :Manuel_Carlos_Santos_Ramalho, :Manuel_Fernando_Santos_Ramalho, :Maria_Flora_Santos_Ramalho .
+
+:Ilda_Santos_Ramalho_1949 :eNeto :Christina_Rosa_Silva_Santos_1879, :Custodia_Azevedo_1867,
+    :Joze_Silva_Santos_1879, :Manuel_Silva_Ramalho_1866 .
+
+:Isabel_Maria_Cabrita_Araujo_Leite_1971 :eNeto :Marcal_Aristides_Costa_Leite_1909,
+    :Maria_Esteves_Araujo_1912 .
+
+:Antonio_Silva_Ramalho_1904 :eAvo :Jose_Carlos_Leite_Ramalho_1967, :Maria_Helena_Leite_Ramalho_1968;
+  :eNeto :Jose_Francisco_Ramos_Mouco, :Maria_Dias_Reis, :Maria_Goncalves_Azevedo .
+
+:Jose_Carlos_Leite_Ramalho_1967 :eNeto :Antonio_Silva_Ramalho_1904, :Marcal_Aristides_Costa_Leite_1909,
+    :Maria_Alves_Santos_1906, :Maria_Esteves_Araujo_1912 .
+
+:Maria_Flora_Araujo_Leite_1941 :eNeto :Flora_Castilho_Couto_Leite, :Marcal_Costa_Leite,
+    :Maria_Araujo_1884 .
+
+:Jose_Santos_Ramalho_1942 :eNeto :Christina_Rosa_Silva_Santos_1879, :Custodia_Azevedo_1867,
+    :Joze_Silva_Santos_1879, :Manuel_Silva_Ramalho_1866 .
+
+:Manuel_Carlos_Santos_Ramalho :eNeto :Christina_Rosa_Silva_Santos_1879, :Custodia_Azevedo_1867,
+    :Joze_Silva_Santos_1879, :Manuel_Silva_Ramalho_1866 .
+
+:Manuel_Fernando_Santos_Ramalho :eNeto :Christina_Rosa_Silva_Santos_1879, :Custodia_Azevedo_1867,
+    :Joze_Silva_Santos_1879, :Manuel_Silva_Ramalho_1866 .
+
+:Maria_Flora_Santos_Ramalho :eNeto :Christina_Rosa_Silva_Santos_1879, :Custodia_Azevedo_1867,
+    :Joze_Silva_Santos_1879, :Manuel_Silva_Ramalho_1866 .
+
+:Maria_Helena_Leite_Ramalho_1968 :eNeto :Antonio_Silva_Ramalho_1904, :Marcal_Aristides_Costa_Leite_1909,
+    :Maria_Alves_Santos_1906, :Maria_Esteves_Araujo_1912 .
+
+:Teresa_Maria_Ribeiro_Leite_1985 :eNeto :Marcal_Aristides_Costa_Leite_1909, :Maria_Esteves_Araujo_1912 .
+
+:Maria_Dias_Reis :eAvo :Abilio_Silva_Ramalho, :Ana_Silva_Ramalho, :Antonio_Silva_Ramalho_1904,
+    :Arminda_Silva_Ramalho, :Ezequiel_Silva_Ramalho, :Generosa_Silva_Ramalho .
+
+:Abilio_Silva_Ramalho :eNeto :Jose_Francisco_Ramos_Mouco, :Maria_Dias_Reis, :Maria_Goncalves_Azevedo .
+
+:Maria_Esteves_Araujo_1912 :eAvo :Ana_Margarida_Ribeiro_Leite_1980, :Henrique_Miguel_Cabrita_Araujo_Leite_1971,
+    :Isabel_Maria_Cabrita_Araujo_Leite_1971, :Jose_Carlos_Leite_Ramalho_1967, :Maria_Helena_Leite_Ramalho_1968,
+    :Teresa_Maria_Ribeiro_Leite_1985 .
+
+:Flora_Castilho_Couto_Leite :eAvo :Henrique_Marcal_Araujo_Leite_1943, :Maria_Flora_Araujo_Leite_1941,
+    :Rui_Alberto_Araujo_Leite_1948 .
+
+:Ana_Silva_Ramalho :eNeto :Jose_Francisco_Ramos_Mouco, :Maria_Dias_Reis, :Maria_Goncalves_Azevedo .
+
+:Arminda_Silva_Ramalho :eNeto :Jose_Francisco_Ramos_Mouco, :Maria_Dias_Reis, :Maria_Goncalves_Azevedo .
+
+:Ezequiel_Silva_Ramalho :eNeto :Jose_Francisco_Ramos_Mouco, :Maria_Dias_Reis, :Maria_Goncalves_Azevedo .
+
+:Generosa_Silva_Ramalho :eNeto :Jose_Francisco_Ramos_Mouco, :Maria_Dias_Reis, :Maria_Goncalves_Azevedo .
+
+:Custodia_Azevedo_1867 :eAvo :Ilda_Santos_Ramalho_1949, :Jose_Santos_Ramalho_1942,
+    :Manuel_Carlos_Santos_Ramalho, :Manuel_Fernando_Santos_Ramalho, :Maria_Flora_Santos_Ramalho .
+
+:Maria_Alves_Santos_1906 :eAvo :Jose_Carlos_Leite_Ramalho_1967, :Maria_Helena_Leite_Ramalho_1968 .
+
+:Jose_Francisco_Ramos_Mouco :eAvo :Abilio_Silva_Ramalho, :Ana_Silva_Ramalho, :Antonio_Silva_Ramalho_1904,
+    :Arminda_Silva_Ramalho, :Ezequiel_Silva_Ramalho, :Generosa_Silva_Ramalho .
+
+:Joze_Silva_Santos_1879 :eAvo :Ilda_Santos_Ramalho_1949, :Jose_Santos_Ramalho_1942,
+    :Manuel_Carlos_Santos_Ramalho, :Manuel_Fernando_Santos_Ramalho, :Maria_Flora_Santos_Ramalho .
+
+:Maria_Goncalves_Azevedo :eAvo :Abilio_Silva_Ramalho, :Ana_Silva_Ramalho, :Antonio_Silva_Ramalho_1904,
+    :Arminda_Silva_Ramalho, :Ezequiel_Silva_Ramalho, :Generosa_Silva_Ramalho .
+
+:Maria_Araujo_1884 :eAvo :Henrique_Marcal_Araujo_Leite_1943, :Maria_Flora_Araujo_Leite_1941,
+    :Rui_Alberto_Araujo_Leite_1948 .
+
+:Christina_Rosa_Silva_Santos_1879 :eAvo :Ilda_Santos_Ramalho_1949, :Jose_Santos_Ramalho_1942,
+    :Manuel_Carlos_Santos_Ramalho, :Manuel_Fernando_Santos_Ramalho, :Maria_Flora_Santos_Ramalho .

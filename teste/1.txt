@@ -1,0 +1,24 @@
+PREFIX : <http://www.semanticweb.org/macz/ontologies/2020/4/bb#>
+select ?prato ?ingrediente where { 
+	?prato a :Prato.
+    ?prato :temIngrediente ?ingrediente.
+    ?ingrediente :nome 'Camarão'.
+} limit 100 
+
+
+PREFIX : <http://www.semanticweb.org/macz/ontologies/2020/4/bb#>
+select ?pratos where { 
+	?menu a :Menu.
+    ?menu :temSecção ?secao.
+    ?secao :temColeção ?colecao.
+    ?colecao :nome 'Sobremesa'.
+   	?secao :temPrato ?pratos
+} limit 100 
+
+PREFIX : <http://www.semanticweb.org/macz/ontologies/2020/4/bb#>
+select ?pratos where { 
+	?pratos a :Prato.
+     FILTER NOT EXISTS {
+        ?pratos :temIngrediente :Molho_de_amendoim
+    }
+} 

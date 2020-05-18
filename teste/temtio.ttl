@@ -1,0 +1,45 @@
+@prefix : <http://www.tartesdajulia.com/ontologies/2020/prc-genoa#> .
+
+:Ana_Margarida_Ribeiro_Leite_1980 :temTio :Henrique_Marcal_Araujo_Leite_1943, :Maria_Flora_Araujo_Leite_1941 .
+
+:Henrique_Miguel_Cabrita_Araujo_Leite_1971 :temTio :Maria_Flora_Araujo_Leite_1941,
+    :Rui_Alberto_Araujo_Leite_1948 .
+
+:Ilda_Santos_Ramalho_1949 :temTio :Abilio_Silva_Ramalho, :Ana_Silva_Ramalho, :Arminda_Silva_Ramalho,
+    :Ezequiel_Silva_Ramalho, :Florinda_Alves_Santos, :Generosa_Silva_Ramalho .
+
+:Isabel_Maria_Cabrita_Araujo_Leite_1971 :temTio :Maria_Flora_Araujo_Leite_1941, :Rui_Alberto_Araujo_Leite_1948 .
+
+:Jose_Carlos_Leite_Ramalho_1967 :temTio :Henrique_Marcal_Araujo_Leite_1943, :Ilda_Santos_Ramalho_1949,
+    :Manuel_Carlos_Santos_Ramalho, :Manuel_Fernando_Santos_Ramalho, :Maria_Flora_Santos_Ramalho,
+    :Rui_Alberto_Araujo_Leite_1948 .
+
+:Jose_Santos_Ramalho_1942 :temTio :Abilio_Silva_Ramalho, :Ana_Silva_Ramalho, :Arminda_Silva_Ramalho,
+    :Ezequiel_Silva_Ramalho, :Florinda_Alves_Santos, :Generosa_Silva_Ramalho .
+
+:Manuel_Carlos_Santos_Ramalho :temTio :Abilio_Silva_Ramalho, :Ana_Silva_Ramalho, :Arminda_Silva_Ramalho,
+    :Ezequiel_Silva_Ramalho, :Florinda_Alves_Santos, :Generosa_Silva_Ramalho .
+
+:Manuel_Fernando_Santos_Ramalho :temTio :Abilio_Silva_Ramalho, :Ana_Silva_Ramalho,
+    :Arminda_Silva_Ramalho, :Ezequiel_Silva_Ramalho, :Florinda_Alves_Santos, :Generosa_Silva_Ramalho .
+
+:Maria_Flora_Santos_Ramalho :temTio :Abilio_Silva_Ramalho, :Ana_Silva_Ramalho, :Arminda_Silva_Ramalho,
+    :Ezequiel_Silva_Ramalho, :Florinda_Alves_Santos, :Generosa_Silva_Ramalho .
+
+:Maria_Helena_Leite_Ramalho_1968 :temTio :Henrique_Marcal_Araujo_Leite_1943, :Ilda_Santos_Ramalho_1949,
+    :Manuel_Carlos_Santos_Ramalho, :Manuel_Fernando_Santos_Ramalho, :Maria_Flora_Santos_Ramalho,
+    :Rui_Alberto_Araujo_Leite_1948 .
+
+:Teresa_Maria_Ribeiro_Leite_1985 :temTio :Henrique_Marcal_Araujo_Leite_1943, :Maria_Flora_Araujo_Leite_1941 .
+
+:Rui_Alberto_Araujo_Leite_1948 :temTio :Albina_Esteves_Araujo_1910, :Emilia_Esteves_Araujo_1908,
+    :Filomena_Esteves_Araujo_1927, :Henrique_Luis_Esteves_Araujo_1924, :Jose_Emilio_Esteves_Araujo_1916,
+    :Luis_Esteves_Araujo_1918, :Sara_Esteves_Araujo_1914, :Virginia_Esteves_Araujo_1921 .
+
+:Henrique_Marcal_Araujo_Leite_1943 :temTio :Albina_Esteves_Araujo_1910, :Emilia_Esteves_Araujo_1908,
+    :Filomena_Esteves_Araujo_1927, :Henrique_Luis_Esteves_Araujo_1924, :Jose_Emilio_Esteves_Araujo_1916,
+    :Luis_Esteves_Araujo_1918, :Sara_Esteves_Araujo_1914, :Virginia_Esteves_Araujo_1921 .
+
+:Maria_Flora_Araujo_Leite_1941 :temTio :Albina_Esteves_Araujo_1910, :Emilia_Esteves_Araujo_1908,
+    :Filomena_Esteves_Araujo_1927, :Henrique_Luis_Esteves_Araujo_1924, :Jose_Emilio_Esteves_Araujo_1916,
+    :Luis_Esteves_Araujo_1918, :Sara_Esteves_Araujo_1914, :Virginia_Esteves_Araujo_1921 .
